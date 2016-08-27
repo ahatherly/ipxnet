@@ -2,15 +2,19 @@ This is a simple Docker wrapper for running the open source IPX server here: htt
 
 If you run this on a server, clients running DOSBox  on your network can connect to it when they start and easy play multiplayer DOS games as if they were on an IPX network.
 
+Starting the server
+===================
+
 To run the ipxnet server on your server machine, simply type:
 
 ```
 docker run --name ipxnet -p 213:213/udp -d ahatherly/ipxnet
 ```
 
-To configure the clients:
+Configure the clients
+=====================
 
-Edit your dosbox config file: ~/.dosbox/dosbox-0.XX.conf
+Edit your dosbox config file: ~/.dosbox/dosbox-0.*.conf
 Change the line:
 
 ```
@@ -23,7 +27,7 @@ to
 ipx=true
 ```
 
-Then add the follpwing ta the end under the [autoexec] section:
+Then add the following to the end under the [autoexec] section:
 
 ```
 ipxnet connect X.X.X.X
